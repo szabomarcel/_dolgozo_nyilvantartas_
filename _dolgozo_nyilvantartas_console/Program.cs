@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Dolgozo;
+using System.Reflection.Emit;
 
 namespace _dolgozo_nyilvantartas_console
 {
@@ -18,11 +19,27 @@ namespace _dolgozo_nyilvantartas_console
             //List<Nyilvantartas> nyilvantartas2 = new List<Nyilvantartas>();
             nyilvantartas = await dolgozoNyilvantartasconsole();
             Console.WriteLine($"Dolgozok száma: {nyilvantartas.Count()}");
-            /*foreach (Nyilvantartas nyilvantart in nyilvantartas)
+            Nyilvantartas maxPaid = null;
+            foreach (Nyilvantartas nyilvantart in nyilvantartas)
             {
-                Console.WriteLine($"{nyilvantart.Salary} - {nyilvantart.Name}");
+                if(maxPaid == null || nyilvantartas.Count > maxPaid.Salary || maxPaid != null)
+                {
+                    maxPaid = nyilvantart; // Frissítjük a maxPaidEmployee-t, ha szükséges
+                    Console.WriteLine($"Legjobban fizetett dolgozó neve: {maxPaid.Name}");
+                }
+                else
+                {
+                    await Console.Out.WriteLineAsync("Ez a név nem létezik.");
+                }
+            }
+            /*foreach (Nyilvantartas nyilvantartas1 in nyilvantartas)
+            {
+                Nyilvantartas munkakor = null;
+                if(munkakor == null || munkakor != null || munkakor.Name == munkakor.Position)
+                {
+                    await Console.Out.WriteLineAsync(munkakor.Position);
+                }
             }*/
-            //nyilvantartas2 = await munkakor();
             await Console.Out.WriteLineAsync("Program vége");
             Console.ReadLine();
         }
@@ -40,17 +57,5 @@ namespace _dolgozo_nyilvantartas_console
             }
             return nyilvantartas;
         }
-
-        /*private static async Task<List<Nyilvantartas>> munkakor()
-        {
-            List<Nyilvantartas> nyilvantartas2 = new List<Nyilvantartas>();
-            var positionCounts = nyilvantartas2.GroupBy(e => e.Position).Select(group => new { Position = group.Key, Count = group.Count() });
-
-            /*foreach (Nyilvantartas nyilvantartas1 in nyilvantartas2)
-            {
-                Console.WriteLine($"{nyilvantartas1.Position}");
-            }
-            return nyilvantartas2;
-        }*/
     }
 }

@@ -19,27 +19,33 @@ namespace _dolgozo_nyilvantartas_console
             //List<Nyilvantartas> nyilvantartas2 = new List<Nyilvantartas>();
             nyilvantartas = await dolgozoNyilvantartasconsole();
             Console.WriteLine($"Dolgozok száma: {nyilvantartas.Count()}");
-            Nyilvantartas maxPaid = null;
+            Nyilvantartas maxPaid = null; // Inicializáljuk a maxPaid-t null-ra
+            Nyilvantartas munkakor = null;
             foreach (Nyilvantartas nyilvantart in nyilvantartas)
             {
-                if(maxPaid == null || nyilvantartas.Count > maxPaid.Salary || maxPaid != null)
+                if (maxPaid == null || nyilvantart.Salary > maxPaid.Salary)
                 {
-                    maxPaid = nyilvantart; // Frissítjük a maxPaidEmployee-t, ha szükséges
-                    Console.WriteLine($"Legjobban fizetett dolgozó neve: {maxPaid.Name}");
+                    maxPaid = nyilvantart; // Frissítjük a maxPaid-t, ha szükséges
                 }
-                else
-                {
-                    await Console.Out.WriteLineAsync("Ez a név nem létezik.");
-                }
-            }
-            /*foreach (Nyilvantartas nyilvantartas1 in nyilvantartas)
-            {
-                Nyilvantartas munkakor = null;
-                if(munkakor == null || munkakor != null || munkakor.Name == munkakor.Position)
+                /*else if (munkakor.Name != munkakor.Position)
                 {
                     await Console.Out.WriteLineAsync(munkakor.Position);
-                }
+                    munkakor = nyilvantart;
+                }*/
+            }
+            if (maxPaid != null)
+            {
+                Console.WriteLine($"Legjobban fizetett dolgozó neve: {maxPaid.Id} - {maxPaid.Name}");
+            }
+            /*else if (munkakor != null)
+            {
+                await Console.Out.WriteLineAsync(munkakor.Name);
             }*/
+
+            else
+            {
+                await Console.Out.WriteLineAsync("Ez a név nem létezik.");
+            }
             await Console.Out.WriteLineAsync("Program vége");
             Console.ReadLine();
         }

@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_dolgozo_Delete));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.modToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.kezdőToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listBox_Dolgozok = new System.Windows.Forms.ListBox();
             this.button_Delete = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -67,6 +67,18 @@
             this.modToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.modToolStripMenuItem.Text = "Mod";
             // 
+            // kezdőToolStripMenuItem
+            // 
+            this.kezdőToolStripMenuItem.Name = "kezdőToolStripMenuItem";
+            this.kezdőToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.kezdőToolStripMenuItem.Text = "Főoldal";
+            // 
+            // modifyToolStripMenuItem
+            // 
+            this.modifyToolStripMenuItem.Name = "modifyToolStripMenuItem";
+            this.modifyToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.modifyToolStripMenuItem.Text = "Modify";
+            // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -78,20 +90,8 @@
             // logoutToolStripMenuItem1
             // 
             this.logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
-            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
             this.logoutToolStripMenuItem1.Text = "Logout";
-            // 
-            // kezdőToolStripMenuItem
-            // 
-            this.kezdőToolStripMenuItem.Name = "kezdőToolStripMenuItem";
-            this.kezdőToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.kezdőToolStripMenuItem.Text = "Főoldal";
-            // 
-            // modifyToolStripMenuItem
-            // 
-            this.modifyToolStripMenuItem.Name = "modifyToolStripMenuItem";
-            this.modifyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.modifyToolStripMenuItem.Text = "Modify";
             // 
             // listBox_Dolgozok
             // 
@@ -164,6 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.OliveDrab;
             this.ClientSize = new System.Drawing.Size(435, 450);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

@@ -71,28 +71,33 @@
             // 
             // button_Login
             // 
+            this.button_Login.BackColor = System.Drawing.Color.Chartreuse;
+            this.button_Login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_Login.Location = new System.Drawing.Point(51, 104);
             this.button_Login.Name = "button_Login";
             this.button_Login.Size = new System.Drawing.Size(100, 23);
             this.button_Login.TabIndex = 4;
             this.button_Login.Text = "Login";
-            this.button_Login.UseVisualStyleBackColor = true;
+            this.button_Login.UseVisualStyleBackColor = false;
             this.button_Login.Click += new System.EventHandler(this.button_Login_Click);
             // 
             // button_Register
             // 
+            this.button_Register.BackColor = System.Drawing.Color.Lavender;
+            this.button_Register.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_Register.Location = new System.Drawing.Point(159, 104);
             this.button_Register.Name = "button_Register";
             this.button_Register.Size = new System.Drawing.Size(100, 23);
             this.button_Register.TabIndex = 5;
             this.button_Register.Text = "Register";
-            this.button_Register.UseVisualStyleBackColor = true;
+            this.button_Register.UseVisualStyleBackColor = false;
             this.button_Register.Click += new System.EventHandler(this.button_Register_Click);
             // 
             // _dolgozo_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(313, 178);
             this.Controls.Add(this.button_Register);
             this.Controls.Add(this.button_Login);

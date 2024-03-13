@@ -22,7 +22,7 @@ namespace _dolgozo_nyilvatartas_windows_forms_app
             _Dolgozo_Regiszter = new _dolgozo_Regiszter();
             _Dolgozo_Modify = new _dolgozo_Modify();
             _Dolgozo_Delete = new _dolgozo_Delete();
-            Application.Run(_Dolgozo_Login);
+            Application.Run(form1);
         }
     }
 }

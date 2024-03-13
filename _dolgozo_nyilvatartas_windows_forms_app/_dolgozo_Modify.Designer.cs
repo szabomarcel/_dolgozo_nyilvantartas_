@@ -148,6 +148,7 @@
             this.listBox_Dolgozok.Name = "listBox_Dolgozok";
             this.listBox_Dolgozok.Size = new System.Drawing.Size(179, 394);
             this.listBox_Dolgozok.TabIndex = 7;
+            this.listBox_Dolgozok.SelectedIndexChanged += new System.EventHandler(this.listBox_Dolgozok_SelectedIndexChanged);
             // 
             // button_Modify
             // 

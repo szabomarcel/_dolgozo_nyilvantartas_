@@ -16,5 +16,10 @@ namespace _dolgozo_nyilvatartas_windows_forms_app
         {
             InitializeComponent();
         }
+
+        private void listBox_Dolgozok_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

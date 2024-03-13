@@ -19,17 +19,27 @@ namespace _dolgozo_nyilvatartas_windows_forms_app
 
         private void button_Login_Click(object sender, EventArgs e)
         {
-            if (Program.name.validUser(textBox_Name.Text, textBox_Position.Text) >= 0)
+            /*if (Program.name.validUser(textBox_Name.Text, textBox_Position.Text) >= 0)
             {
                 Program.form1.Show();
-            }
+            }*/
         }
 
         private void button_Register_Click(object sender, EventArgs e)
         {
-            if (Program.name.validUser(textBox_Name.Text, textBox_Position.Text) >=0)
+            /*if (Program.name.validUser(textBox_Name.Text, textBox_Position.Text) >=0)
             {
                 Program._Dolgozo_Regiszter.Show();
+            }*/
+        }
+
+        private void _dolgozo_Login_Load(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Valóban ki akar lépni?", "kilépés", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                //System.Windows.Forms.Application.Exit();
+                //Environment.Exit(0);
+                System.Windows.Forms.Application.ExitThread();
             }
         }
     }

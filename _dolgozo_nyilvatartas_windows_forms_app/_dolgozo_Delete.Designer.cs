@@ -100,6 +100,7 @@
             this.listBox_Dolgozok.Name = "listBox_Dolgozok";
             this.listBox_Dolgozok.Size = new System.Drawing.Size(169, 394);
             this.listBox_Dolgozok.TabIndex = 1;
+            this.listBox_Dolgozok.SelectedIndexChanged += new System.EventHandler(this.listBox_Dolgozok_SelectedIndexChanged);
             // 
             // button_Delete
             // 
@@ -180,6 +181,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "_dolgozo_Delete";
             this.Text = "_dolgozo_Delete";
+            this.Load += new System.EventHandler(this._dolgozo_Delete_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

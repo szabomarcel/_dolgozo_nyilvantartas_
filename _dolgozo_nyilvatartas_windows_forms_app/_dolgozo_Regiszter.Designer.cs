@@ -64,6 +64,7 @@
             this.button_Register.TabIndex = 2;
             this.button_Register.Text = "Register";
             this.button_Register.UseVisualStyleBackColor = false;
+            this.button_Register.Click += new System.EventHandler(this.button_Register_Click);
             // 
             // textBox_Name
             // 
@@ -126,6 +127,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "_dolgozo_Regiszter";
             this.Text = "_dolgozo_Regiszter";
+            this.Load += new System.EventHandler(this._dolgozo_Regiszter_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

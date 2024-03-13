@@ -50,7 +50,6 @@
             this.listBox_Dolgozok.Name = "listBox_Dolgozok";
             this.listBox_Dolgozok.Size = new System.Drawing.Size(189, 303);
             this.listBox_Dolgozok.TabIndex = 0;
-            this.listBox_Dolgozok.SelectedIndexChanged += new System.EventHandler(this.listBox_Dolgozok_SelectedIndexChanged);
             // 
             // contextMenuStrip1
             // 
@@ -81,13 +80,13 @@
             // modifyToolStripMenuItem
             // 
             this.modifyToolStripMenuItem.Name = "modifyToolStripMenuItem";
-            this.modifyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modifyToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.modifyToolStripMenuItem.Text = "Modify";
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             // 
             // logoutToolStripMenuItem
@@ -101,7 +100,7 @@
             // logoutToolStripMenuItem1
             // 
             this.logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
-            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
             this.logoutToolStripMenuItem1.Text = "Logout";
             // 
             // button_Reset
@@ -142,6 +141,7 @@
             this.MainMenuStrip = this.menuStrip_Dolgozo;
             this.Name = "Form1";
             this.Text = "JSON Database";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip_Dolgozo.ResumeLayout(false);
             this.menuStrip_Dolgozo.PerformLayout();
             this.ResumeLayout(false);

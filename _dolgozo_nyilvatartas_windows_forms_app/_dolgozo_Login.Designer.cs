@@ -109,6 +109,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "_dolgozo_Login";
             this.Text = "_dolgozo_Login";
+            this.Load += new System.EventHandler(this._dolgozo_Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
